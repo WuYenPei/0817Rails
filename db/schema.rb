@@ -10,13 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_16_153104) do
+ActiveRecord::Schema.define(version: 2021_08_17_143958) do
 
   create_table "notes", force: :cascade do |t|
     t.string "title"
     t.text "content"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.date "deleted_at"
+    t.index ["deleted_at"], name: "index_notes_on_deleted_at"
   end
 
   create_table "users", force: :cascade do |t|

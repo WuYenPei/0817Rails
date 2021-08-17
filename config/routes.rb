@@ -7,11 +7,15 @@ Rails.application.routes.draw do
 
   get "/hello",to: "pages#main"
   get "/about",to: "pages#about"
-  get "/users",to:"users#profile"
+
+
+
+  
+  resources :users, only: [:create] do
+    #before_action :aaaa, only: [:index, :show, :edit]
+  #get "/users",to:"users#profile"
+  collection do
+    get :sign_up
+    end
+  end
 end
-
-
-
-
-
-
