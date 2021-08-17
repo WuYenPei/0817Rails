@@ -1,4 +1,8 @@
 class UsersController < ApplicationController
+    def sign_in
+        @user = User.new
+    end
+
     def profile
     end
 

@@ -3,9 +3,9 @@ class User < ApplicationRecord
 
     attr_accessor :password_confirmation
 
-    validates :email, presence: true
+    validates :email, presence: true, uniqueness: true
     validates :password, presence: true, confirmation: true
-    validates :account, presence: true
+    validates :account, presence: true, uniqueness: true
 
     before_create :encrypt_password
 
