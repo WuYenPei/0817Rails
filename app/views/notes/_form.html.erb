@@ -1,0 +1,9 @@
+<%= form_for(note) do |f| %>
+    <%= f.label :title, "標題" %>
+    <%= f.text_field :title %>
+    <!-- <input type="text" name="note[title]" value="<%= @note.title %>"> -->
+
+    <%= f.label :content, "內文" %>
+    <%= f.text_area :content %>
+    <%= f.submit  %>
+<% end %>

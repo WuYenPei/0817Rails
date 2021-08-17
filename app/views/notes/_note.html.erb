@@ -1,0 +1,7 @@
+<li>
+    <%= link_to note.title, note_path(note) %>
+    <%= link_to "編輯", edit_note_path(note)%>
+    <%= link_to "刪除", note_path(note),
+                        method: 'delete',
+                         "data-confirm": "誠實面對自己" %>
+</li>
